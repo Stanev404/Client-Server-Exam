@@ -9,9 +9,15 @@ $(document).ready(function() {
 	var comment = [];
 	cnt = 0;
 	$('#addComment').click(function() {
-    if($('#bodyText').val() == "" || $('#name').val() == ""){
+    if($('#bodyText').val() == ""){
+      alert("You must enter comment!");
       return;
     }
+    if($('#name').val() == ""){
+      alert("You must enter name!");
+      return;
+    }
+
     else{
 	  var addObj = {
 	    "name": $('#name').val(),
@@ -22,10 +28,10 @@ $(document).ready(function() {
 		console.log(cnt);
 	  comment.push(addObj);
 	  render(addObj);
-}
+
 		$('#name').val('');
 		$('#bodyText').val('');
-
+}
 
 	});
 
