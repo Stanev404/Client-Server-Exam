@@ -7,13 +7,13 @@ namespace portfolio.Models
 {
     public class Comment
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string publisherName { get; set; }
         public string contentOfComment{ get; set; }
 
         public override string ToString()
         {
-            return "publisherName: " + this.publisherName + " " + "contentOfComment: " + this.contentOfComment;
+            return "id: " + this.id + " publisherName: " + this.publisherName + " " + "contentOfComment: " + this.contentOfComment;
         }
 
     }
